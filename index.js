@@ -30,24 +30,22 @@ function RightTriangle(height, base) {
     this.base = base;
 
     this.getArea = function() {
-        console.log(.5*base*height);
+        return this.base * this.height * .5; 
+
     }
+}
 
 
 let smallTriangle = new RightTriangle(3, 6); 
 let bigTriangle = new RightTriangle(10, 20);
-if (smallTriangle == 9) {
+
+let smallTriangleArea = smallTriangle.getArea();
+let bigTriangleArea = bigTriangle.getArea();
+
+
+if (smallTriangleArea === 9) {
     console.log("Small triangle test passed")
 }
-if (bigTriangle == 100) {
+if (bigTriangleArea === 100) {
     console.log("Big triangle test passed")
 }
-
-}
-
-
-smallTriangle.getArea();
-bigTriangle.getArea();
-
-console.log(smallTriangle);
-console.log(bigTriangle);
